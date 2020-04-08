@@ -7,7 +7,7 @@ mongoose.set("useUnifiedTopology", true);
 mongoose.connection.on("error", err => {
   console.error("[DATABASE ERROR]:", err);
 });
-mongoose.connection.on("connection", () => {
+mongoose.connection.on("open", () => {
   console.log("DbConnection Successful");
 });
 
